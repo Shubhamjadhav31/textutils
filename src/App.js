@@ -1,5 +1,5 @@
 import "./App.css";
-// import About from './components/About';
+import About from './components/About';
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
@@ -25,13 +25,13 @@ function App() {
       document.body.style.background = "#230653";
       document.body.style.color = "#fff";
       showAlert("Dark mode has been enabled", "success");
-      document.title = "TextUtils - Dark Mode";
+      // document.title = "TextUtils - Dark Mode";
     } else {
       setMode("light");
       document.body.style.background = "white";
       document.body.style.color = "black";
       showAlert("light mode has been enabled", "success");
-      document.title = "TextUtils - light Mode";
+      // document.title = "TextUtils - light Mode";
     }
   };
   return (
@@ -43,10 +43,10 @@ function App() {
       <div className="container my-3">
         <TextForm
           showAlert={showAlert}
-          heading="Enter The text to analyze below"
+          heading="Try TextUtils - Word Counter, Charactor Counter, Remove extra spaces"
           mode={mode}
         />
-        {/* <About/> */}
+        <About/>  
       </div>
     </>
   );
